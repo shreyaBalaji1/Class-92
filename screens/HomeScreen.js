@@ -2,11 +2,14 @@ import React ,{Component} from 'react';
 import {View,Text,StyleSheet,TouchableOpacity, SafeAreaView, Platform, StatusBar, ImageBackground} from 'react-native';
 //import{Card,Header,Icon} from 'react-native-elements';
 //import firebase from 'firebase';
+import MyHeader from "../components/MyHeader";
 
 export default class HomeScreen extends Component {
     render() {
         return(
             <SafeAreaView style = {styles.safeArea}>
+                <MyHeader title = "App Name"/>
+                
                 <TouchableOpacity style = {styles.titleBar} onPress = {() => {this.props.navigation.navigate("ISSTracker")}}>
                     <Text style = {styles.titleText}>ISS Tracker</Text>
                 </TouchableOpacity>
